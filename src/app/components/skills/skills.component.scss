@@ -1,0 +1,125 @@
+.skills {
+    padding: 8rem 2rem;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 245, 255, 0.02) 50%, transparent 100%);
+    position: relative;
+  
+    &::before {
+      content: '';
+     //@extend .grid-bg;
+    }
+  }
+  
+  .skills-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  
+    h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+    }
+  
+    .section-subtitle {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+  }
+  
+  .skills-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  
+    .tab-btn {
+      padding: 0.5rem 1.25rem;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text-secondary);
+      font-family: 'Fira Code', monospace;
+      font-size: 0.8rem;
+      cursor: none;
+      transition: all 0.25s ease;
+      letter-spacing: 0.05em;
+  
+      &:hover {
+        border-color: rgba(0, 245, 255, 0.3);
+        color: var(--neon-cyan);
+      }
+  
+      &.active {
+        background: rgba(0, 245, 255, 0.08);
+        border-color: var(--neon-cyan);
+        color: var(--neon-cyan);
+        box-shadow: 0 0 20px rgba(0, 245, 255, 0.1);
+      }
+    }
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.25rem;
+  }
+  
+  .skill-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(0, 245, 255, 0.08);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+    animation: fadeUp 0.4s ease forwards;
+    opacity: 0;
+  
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  
+    &:hover {
+      border-color: rgba(0, 245, 255, 0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 245, 255, 0.05);
+    }
+  
+    .skill-icon {
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+    }
+  
+    .skill-name {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+  
+    .skill-bar-wrap {
+      height: 4px;
+      background: rgba(255, 255, 255, 0.06);
+      overflow: hidden;
+  
+      .skill-bar {
+        height: 100%;
+        background: var(--gradient-main);
+        transition: width 0.8s ease;
+      }
+    }
+  
+    .skill-level {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.9rem;
+      color: var(--neon-cyan);
+      align-self: flex-end;
+    }
+  }

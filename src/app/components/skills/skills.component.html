@@ -1,0 +1,33 @@
+<section class="skills" id="skills">
+    <div class="skills-container">
+      <div class="section-header fade-in-up">
+        <p class="section-label">habilidades</p>
+        <h2>Mi stack <span class="glow-text">tecnológico</span></h2>
+        <p class="section-subtitle">Herramientas y tecnologías con las que trabajo</p>
+      </div>
+  
+      <div class="skills-tabs fade-in-up">
+        <button
+          *ngFor="let cat of categories"
+          [class.active]="activeCategory === cat.id"
+          (click)="setCategory(cat.id)"
+          class="tab-btn">
+          {{ cat.label }}
+        </button>
+      </div>
+  
+      <div class="skills-grid fade-in-up">
+        <div
+          *ngFor="let skill of filteredSkills; let i = index"
+          class="skill-card"
+          [style.animation-delay]="(i * 0.07) + 's'">
+          <div class="skill-icon" [innerHTML]="skill.icon"></div>
+          <span class="skill-name">{{ skill.name }}</span>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" [style.width]="skill.level + '%'"></div>
+          </div>
+          <span class="skill-level">{{ skill.level }}%</span>
+        </div>
+      </div>
+    </div>
+  </section>

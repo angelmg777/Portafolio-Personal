@@ -1,0 +1,60 @@
+<section class="about" id="about">
+    <div class="about-container">
+      <div class="about-text">
+        <p class="section-label fade-in-up">sobre mí</p>
+        <h2 class="fade-in-up">Un poco sobre <span class="glow-text">mí</span></h2>
+  
+        <div class="about-paragraphs fade-in-up">
+          <p>
+            Soy <strong>Ingeniero en Desarrollo de Software</strong> egresado del Centro de Enseñanza Tecnica Industrial (Plantel Coloms), con sede en <span class="highlight">Guadalajara, Jalisco</span>.
+            Desde que escribí mi primera línea de código, supe que quería crear cosas que
+            importaran.
+          </p>
+          <p>
+            Me apasiona el <strong>desarrollo web y movil moderno</strong>, especialmente construir
+            interfaces atractivas e intuitivas con Angular, mientras mantengo un backend
+            sólido. Creo firmemente que el buen código no solo funciona — también se entiende.
+          </p>
+          <p>
+            Estoy en búsqueda de oportunidades profesionales donde pueda
+            <span class="highlight">aprender, crecer y aportar valor</span> desde el primer día.
+            Listo para enfrentar retos reales en equipo.
+          </p>
+        </div>
+  
+        <div class="about-facts fade-in-up">
+          <div class="fact">
+            <span class="fact-value glow-text">2024</span>
+            <span class="fact-label">Egresado</span>
+          </div>
+          <div class="fact">
+            <span class="fact-value glow-text">3+</span>
+            <span class="fact-label">Proyectos</span>
+          </div>
+          <div class="fact">
+            <span class="fact-value glow-text">GDL</span>
+            <span class="fact-label">Jalisco, MX</span>
+          </div>
+        </div>
+      </div>
+  
+      <div class="about-card fade-in-up">
+        <div class="profile-frame">
+          <div class="profile-placeholder">
+            <div class="initials">AGMG</div>
+            <div class="frame-corner tl"></div>
+            <div class="frame-corner tr"></div>
+            <div class="frame-corner bl"></div>
+            <div class="frame-corner br"></div>
+          </div>
+        </div>
+  
+        <div class="about-info-list">
+          <div class="info-item" *ngFor="let item of infoItems">
+            <span class="info-key">{{ item.key }}</span>
+            <span class="info-val">{{ item.value }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
